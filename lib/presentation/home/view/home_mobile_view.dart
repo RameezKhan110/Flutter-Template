@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../../../core/constants/app_strings.dart';
 import '../../../core/utils/widgets/app_text.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomeMobileView extends StatelessWidget {
+  const HomeMobileView({super.key});
 
   @override
   Widget build(BuildContext context) {

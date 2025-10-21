@@ -1,0 +1,21 @@
+{
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "off",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    // Dart-specific settings
+    "dart.lineLength": 80,
+    "dart.enableSdkFormatter": true,
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    // Global editor ruler to visualize 80 cols in all files
+    "editor.rulers": [
+        80
+    ],
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.rulers": [
+            80
+        ]
+    }
+}
