@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,36 +15,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<HomeBloc>(
-            create: (_) => HomeBloc()),
-        BlocProvider<BottomNavigationCubit>(
-            create: (_) => BottomNavigationCubit())
+        BlocProvider<HomeBloc>(create: (_) => HomeBloc()),
+        BlocProvider<BottomNavigationCubit>(create: (_) => BottomNavigationCubit()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) => child!,
-        child: const AppEntry(),
+        child: MaterialApp.router(
+          theme: ThemeData(scaffoldBackgroundColor: AppColors.primaryBackgroundColor),
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
+          debugShowCheckedModeBanner: false,
+          routerConfig: AppRouter.appRouter,
+        ),
       ),
     );
   }
 }
-
-class AppEntry extends StatelessWidget {
-  const AppEntry({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme:
-      ThemeData(scaffoldBackgroundColor: AppColors.primaryBackgroundColor),
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.createRouter(),
-    );
-  }
-}
-
