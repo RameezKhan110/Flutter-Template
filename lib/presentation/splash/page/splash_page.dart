@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:nawa_app/presentation/splash/view/splash_view.dart';
+import 'package:nawa_app/presentation/splash/view/splash_mobile_view.dart';
 
 import '../../../core/utils/responsive/responsive_view_widget.dart';
 
@@ -9,6 +9,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveView(mobile: SplashView());
+    return const ResponsiveView(mobile: SplashMobileView());
   }
 }
