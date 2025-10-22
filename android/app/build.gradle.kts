@@ -10,6 +10,20 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
+    flavorDimensions += "default"
+
+    productFlavors {
+         create("dev") {
+            dimension = "default"
+            applicationId = "com.nawa.mobile.nawa_app.dev"
+            versionNameSuffix = "-dev"
+        }
+        create("prod") {
+            dimension = "default"
+            applicationId = "com.nawa.mobile.nawa_app"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
